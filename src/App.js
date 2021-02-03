@@ -23,7 +23,7 @@ function App() {
             {words}
         </header>
         <header className="App-header">
-            <button onClick={hello}>CLICK ME</button>
+            <button onClick={hello}>HELLO WORLD</button>
         </header>
         <header className="App-header">
             <Row category="Object" word=<Nature/>/>
