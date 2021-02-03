@@ -1,25 +1,50 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useState} from 'react'
+import Nature from './components/Nature'
+import Row from './components/Row'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    const [words, setWords] = useState([])
+
+    function hello() {
+        fetch('http://api.datamuse.com/words?ml=duck&sp=b*')
+            .then(res => res.json())
+            .then(json => console.log(json))
+
+    }
+    
+    return (
+        <div className="App">
+
+        {/* Comment*/}
+
+        <header className="App-header">
+            {words}
+        </header>
+        <header className="App-header">
+            <button onClick={hello}>CLICK ME</button>
+        </header>
+        <header className="App-header">
+            <Row category="Object" word=<Nature/>/>
+        </header>
+        <header className="App-header">
+            Action
+        </header>
+        <header className="App-header">
+            <Nature />
+        </header>
+        <header className="App-header">
+            Random
+        </header>
+
+        
+
+
+
     </div>
-  );
+
+    );
 }
 
 export default App;
