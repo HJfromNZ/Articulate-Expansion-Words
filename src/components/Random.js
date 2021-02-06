@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Nature = () => {
+const Random = () => {
 
     const nature = ['creature', 'beast', 'fauna']
 
@@ -8,11 +8,11 @@ const Nature = () => {
 
     return (
         <div className="Nothing">
-            <span class="category-box nature left">N</span>
+            <span class="category-box random left">R</span>
             <span className="Word">{nature[index]}</span>
-            <span class="category-box nature right" />
+            <span class="category-box random right" />
         </div>
     )
 }
 
-export default Nature
+export default Random

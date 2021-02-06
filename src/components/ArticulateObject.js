@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Nature = () => {
+const ArticulateObject = () => {
 
     const nature = ['creature', 'beast', 'fauna']
 
@@ -8,11 +8,11 @@ const Nature = () => {
 
     return (
         <div className="Nothing">
-            <span class="category-box nature left">N</span>
+            <span class="category-box articulateObject left">O</span>
             <span className="Word">{nature[index]}</span>
-            <span class="category-box nature right" />
+            <span class="category-box articulateObject right" />
         </div>
     )
 }
 
-export default Nature
+export default ArticulateObject

@@ -1,6 +1,11 @@
 import React from 'react'
 
-const Row = ({category, word}) => {
+const Person = () => {
+
+    const nature = ['creature', 'beast', 'fauna']
+
+    const index = Math.floor(Math.random() * 2)
+
     return (
         <div className="Nothing">
             <span class="category-box person left">P</span>
@@ -10,4 +15,4 @@ const Row = ({category, word}) => {
     )
 }
 
-export default Row
+export default Person

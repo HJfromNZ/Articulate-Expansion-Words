@@ -1,5 +1,6 @@
 .App {
-
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .App-header {
@@ -8,9 +9,63 @@
     justify-content: center;
     font-size: calc(10px + 2vmin);
     margin-bottom: 10px;
-
 }
 
+img {
+    width:100px;
+    height:auto
+}
+
+.category-box {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border: 3px solid rgba(1, 1, 1, 1);
+    text-align: center;
+    font-family: cursive;
+    font-weight: bold;
+  }
+
+  .left {
+    float: left;
+  }
+
+  .right {
+    float: right;
+  }
+  
+  .person {
+    background: #ffcb04;
+  }
+
+  .world {
+    background: #005e96;
+  }
+
+  .articulateObject {
+    background: #0099da;
+  }
+
+  .action {
+    background: #f37027;
+  }
+
+  .nature {
+    background: #008752;
+  }
+
+  .random {
+    background: #ed1c24;
+  }
+  
+
+.Score {
+    margin-bottom: 10px;
+}
+
+.Word {
+    margin-left: 10px;
+}
 
 @keyframes App-logo-spin {
     from {
