@@ -8,7 +8,7 @@ const World = () => {
 
     return (
         <div className="Word-row" word={nature[index]}>
-            <span class="category-box world left">W</span>
+            <span className="category-box world left">W</span>
             <span className="Word">{nature[index]}</span>
             <span class="category-box world right" />
         </div>
