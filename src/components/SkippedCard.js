@@ -2,9 +2,9 @@ import React from 'react'
 
 const SkippedCard = () => {
     return (
-        <div>
+        <span>
             <img src="https://www.drumondpark.com/articulatecards/back.jpg" />
-        </div>
+        </span>
     )
 }
 

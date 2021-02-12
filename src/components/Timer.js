@@ -15,9 +15,9 @@ const Timer = ({seconds}) => {
     }, [remainingTime])
 
     return (
-        <div>
+        <span>
             Time Remaining: {remainingTime}
-        </div>
+        </span>
     )
 }
 

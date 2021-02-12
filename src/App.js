@@ -18,10 +18,12 @@ function App() {
     const [words, setWords] = useState([])
     const [score, setScore] = useState(0)
     const [skips, setSkips] = useState(5)
-    const [seconds, setSeconds] = useState(30)
+    const [seconds, setSeconds] = useState(3)
 
     function incrementScore() {
-        return setScore(prev => prev + 1)    
+        if (seconds != 0) {
+            return setScore(prev => prev + 1)    
+        }
     }
 
     function incrementSkips() {
@@ -38,13 +40,18 @@ function App() {
     
     return (
         <div className="App">
-            
-        <div className="Game-button" align="right">
-            
+        
+        
+        <div>
             <span className="Score">Score: {score}</span>
-            <span align="left"><Timer seconds={seconds} /></span>
-            <Button variant="success" onClick={incrementScore}>Correct</Button>
+            <span className="Timer"><Timer seconds={seconds} /></span>
         </div>
+        
+
+        {/* <div className="Game-buttons">
+
+            <Button className="Correct-button" variant="success" onClick={incrementScore}>Correct</Button>
+        </div> */}
         
         <header className="App-header">
             <Person />
@@ -61,12 +68,13 @@ function App() {
 
         </header>
 
-        <div className="Game-button" align="right">
+        <div className="Game-button">
             <div className="Skips">Skips remaining: {skips}</div>
             <Button variant="warning" onClick={decrementSkips}>Skip</Button>
         </div>
 
         <div className="Skipped-cards">
+            <SkippedCard />
             <SkippedCard />
         </div>
 
